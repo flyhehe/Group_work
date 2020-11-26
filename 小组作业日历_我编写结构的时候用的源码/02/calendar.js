@@ -28,6 +28,7 @@ var backgroundImg = [
 
 
 // --------------------------------------------------------------
+//测试一下假如修改Git
 var calendar = document.querySelector('.calendar');
 // 让日历可以获取焦点
 calendar.tabindex = "0";
