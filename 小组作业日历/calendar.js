@@ -364,5 +364,19 @@ function refreshDate() {
     }
 
 }
-
+// 事件遮罩，即点击外面隐藏日历
+if (inputbtn) {
+    document.addEventListener("click", function(e) {
+        var onhere = false;
+        var eBox = e.path;
+        for (var i = 0; i < e.path.length; i++) {
+            if (eBox[i].className == "calendar" || eBox[i].className == "inputbtn") {
+                onhere = true;
+            }
+        }
+        if (!onhere) {
+            calendar.style.display = 'none';
+        }
+    })
+}
 refreshDate();
